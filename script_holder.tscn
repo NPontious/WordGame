@@ -1,0 +1,188 @@
+[gd_scene load_steps=14 format=3 uid="uid://g2tvb018vg8a"]
+
+[ext_resource type="Script" path="res://logic.gd" id="1_cm373"]
+[ext_resource type="Texture2D" uid="uid://dup60lbdbci7f" path="res://icon.svg" id="2_ba7jq"]
+[ext_resource type="Script" path="res://button.gd" id="2_h4iug"]
+[ext_resource type="Script" path="res://clear.gd" id="4_m550c"]
+[ext_resource type="Script" path="res://enter.gd" id="5_6ejrn"]
+[ext_resource type="Script" path="res://curr_word.gd" id="6_pjbcd"]
+[ext_resource type="Script" path="res://used_word.gd" id="7_3qkrr"]
+[ext_resource type="Script" path="res://mix.gd" id="8_ohnvf"]
+[ext_resource type="Script" path="res://score.gd" id="9_jtmej"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d60we"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_hgjm4"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_v6fc8"]
+line_spacing = 2.0
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_gh1tk"]
+font_size = 40
+
+[node name="Main" type="Node2D"]
+
+[node name="LogicScript" type="Node2D" parent="."]
+script = ExtResource("1_cm373")
+
+[node name="TouchScreenButtonEnter" type="TouchScreenButton" parent="LogicScript"]
+position = Vector2(702, 287)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("5_6ejrn")
+
+[node name="Label" type="Label" parent="LogicScript/TouchScreenButtonEnter"]
+offset_right = 128.0
+offset_bottom = 128.0
+text = "Check"
+label_settings = SubResource("LabelSettings_d60we")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Buttons"]
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("2_h4iug")
+
+[node name="Label" type="Label" parent="Buttons/TouchScreenButton"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(173, 0)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("2_h4iug")
+
+[node name="Label" type="Label" parent="Buttons/TouchScreenButton2"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(358, 0)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("2_h4iug")
+
+[node name="Label" type="Label" parent="Buttons/TouchScreenButton3"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(530, 0)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("2_h4iug")
+
+[node name="Label" type="Label" parent="Buttons/TouchScreenButton4"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(701, 0)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("2_h4iug")
+
+[node name="Label" type="Label" parent="Buttons/TouchScreenButton5"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(860, 0)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("2_h4iug")
+
+[node name="Label" type="Label" parent="Buttons/TouchScreenButton6"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="Buttons"]
+position = Vector2(1007, 0)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("2_h4iug")
+
+[node name="Label" type="Label" parent="Buttons/TouchScreenButton7"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButtonClear" type="TouchScreenButton" parent="."]
+position = Vector2(530, 286)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("4_m550c")
+
+[node name="Label" type="Label" parent="TouchScreenButtonClear"]
+offset_right = 128.0
+offset_bottom = 128.0
+text = "Clear"
+label_settings = SubResource("LabelSettings_d60we")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DisplayCurr_Word" type="TouchScreenButton" parent="."]
+position = Vector2(256, 290)
+texture_normal = ExtResource("2_ba7jq")
+
+[node name="Label" type="Label" parent="DisplayCurr_Word"]
+offset_right = 128.0
+offset_bottom = 128.0
+script = ExtResource("6_pjbcd")
+
+[node name="DisplayUsed_Word" type="TouchScreenButton" parent="."]
+position = Vector2(394, 289)
+texture_normal = ExtResource("2_ba7jq")
+
+[node name="Label" type="Label" parent="DisplayUsed_Word"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_v6fc8")
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("7_3qkrr")
+
+[node name="MixButton" type="TouchScreenButton" parent="."]
+position = Vector2(97, 292)
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("8_ohnvf")
+
+[node name="Label" type="Label" parent="MixButton"]
+offset_right = 128.0
+offset_bottom = 128.0
+text = "Mix"
+label_settings = SubResource("LabelSettings_gh1tk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 928.0
+offset_top = 296.0
+offset_right = 1039.0
+offset_bottom = 407.0
+script = ExtResource("9_jtmej")
