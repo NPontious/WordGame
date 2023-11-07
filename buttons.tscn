@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcpqhlqignr73"]
+
+[ext_resource type="Texture2D" uid="uid://dup60lbdbci7f" path="res://icon.svg" id="1_v4vok"]
+[ext_resource type="Script" path="res://button.gd" id="2_m5srm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hgjm4"]
+font_size = 64
+
+[node name="Buttons" type="Node"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+texture_normal = ExtResource("1_v4vok")
+script = ExtResource("2_m5srm")
+
+[node name="Label" type="Label" parent="TouchScreenButton"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2(173, 0)
+texture_normal = ExtResource("1_v4vok")
+script = ExtResource("2_m5srm")
+
+[node name="Label" type="Label" parent="TouchScreenButton2"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2(358, 0)
+texture_normal = ExtResource("1_v4vok")
+script = ExtResource("2_m5srm")
+
+[node name="Label" type="Label" parent="TouchScreenButton3"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+position = Vector2(530, 0)
+texture_normal = ExtResource("1_v4vok")
+script = ExtResource("2_m5srm")
+
+[node name="Label" type="Label" parent="TouchScreenButton4"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+position = Vector2(701, 0)
+texture_normal = ExtResource("1_v4vok")
+script = ExtResource("2_m5srm")
+
+[node name="Label" type="Label" parent="TouchScreenButton5"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
+position = Vector2(860, 0)
+texture_normal = ExtResource("1_v4vok")
+script = ExtResource("2_m5srm")
+
+[node name="Label" type="Label" parent="TouchScreenButton6"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="."]
+position = Vector2(1007, 0)
+texture_normal = ExtResource("1_v4vok")
+script = ExtResource("2_m5srm")
+
+[node name="Label" type="Label" parent="TouchScreenButton7"]
+offset_right = 128.0
+offset_bottom = 128.0
+label_settings = SubResource("LabelSettings_hgjm4")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
