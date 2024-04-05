@@ -15,12 +15,35 @@ func _ready():
 	letters = char_list(the_word)
 	shuffled = letters.duplicate()
 	shuffled = shuffle_array(shuffled)
-	var number = 0
-	for child in get_parent().get_node("Buttons").get_children():
-		child.letter = shuffled[number]
+	
+	# Get the screen size
+	var screen_size = DisplayServer.window_get_size()
+	var screen_width = screen_size.x
+	var button_size = Vector2(screen_size.x, screen_size.x)
+	
+	# Calculate the spacing between buttons
+	var buttons_node = get_parent().get_node("Buttons")
+	var number_of_buttons = buttons_node.get_child_count()
+	var spacing = screen_width / (number_of_buttons + 2) # +1 to account for the spacing on the sides
+	var ypos = screen_size.y * 0.1
+	
+	
+	var position_x = spacing
+	for child in buttons_node.get_children():
+		child.letter = shuffled[child.get_index()]
 		var label = child.get_node("Label")
-		label.text = shuffled[number]
-		number += 1
+		label.text = shuffled[child.get_index()]
+		
+		# Set the button's position
+		child.position.x = position_x
+		position_x += spacing
+		print(ypos)
+		child.position.y = ypos
+
+		print("Apply size: ")
+		print(button_size / 1440.0)
+		child.apply_scale(button_size / 1440.0)
+	
 	while run:
 		await $TouchScreenButtonEnter.released
 		print(the_word)
