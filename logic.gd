@@ -19,13 +19,46 @@ func _ready():
 	# Get the screen size
 	var screen_size = DisplayServer.window_get_size()
 	var screen_width = screen_size.x
-	var button_size = Vector2(screen_size.x, screen_size.x)
+	var button_size = Vector2(screen_size.x, screen_size.x) / 1440.0
 	
 	# Calculate the spacing between buttons
 	var buttons_node = get_parent().get_node("Buttons")
 	var number_of_buttons = buttons_node.get_child_count()
-	var spacing = screen_width / (number_of_buttons + 2) # +1 to account for the spacing on the sides
+	var spacing = screen_width / (number_of_buttons + 2)
+	var spacing2 = screen_width / (6 + 2)
 	var ypos = screen_size.y * 0.1
+
+	get_parent().get_node(".").get_child(0).position.y = screen_size.y * 0.4
+	get_parent().get_node(".").get_child(0).position.x = spacing2 * 2
+	print(get_parent().get_node(".").get_child(0))
+	print(get_parent().get_node(".").get_child(0).position.x)
+	get_child(0).position.y = screen_size.y * 0.0
+	get_parent().get_node(".").get_child(2).position.y = screen_size.y * 0.4
+	get_parent().get_node(".").get_child(2).position.x = spacing2
+	print(get_parent().get_node(".").get_child(2))
+	print(get_parent().get_node(".").get_child(2).position.x)
+	get_parent().get_node(".").get_child(3).position.y = screen_size.y * 0.4
+	get_parent().get_node(".").get_child(3).position.x = spacing2 * 2
+	print(get_parent().get_node(".").get_child(3))
+	print(get_parent().get_node(".").get_child(3).position.x)
+	get_parent().get_node(".").get_child(4).position.y = screen_size.y * 0.4
+	get_parent().get_node(".").get_child(4).position.x = spacing2 * 3
+	print(get_parent().get_node(".").get_child(4))
+	print(get_parent().get_node(".").get_child(4).position.x)
+	get_parent().get_node(".").get_child(5).position.y = screen_size.y * 0.4
+	get_parent().get_node(".").get_child(5).position.x = spacing2 * 4
+	print(get_parent().get_node(".").get_child(5))
+	print(get_parent().get_node(".").get_child(5).position.x)
+	get_parent().get_node(".").get_child(6).position.y = screen_size.y * 0.4
+	get_parent().get_node(".").get_child(6).position.x = spacing2 * 5
+	print(get_parent().get_node(".").get_child(6))
+	print(get_parent().get_node(".").get_child(6).position.x)
+	
+	
+	#for child in get_parent().get_children():
+	#	print(child)
+		#if not child is Node:
+			#child.position.y = screen_size.y * 0.4
 	
 	
 	var position_x = spacing
@@ -37,12 +70,9 @@ func _ready():
 		# Set the button's position
 		child.position.x = position_x
 		position_x += spacing
-		print(ypos)
 		child.position.y = ypos
 
-		print("Apply size: ")
-		print(button_size / 1440.0)
-		child.apply_scale(button_size / 1440.0)
+		child.apply_scale(button_size)
 	
 	while run:
 		await $TouchScreenButtonEnter.released

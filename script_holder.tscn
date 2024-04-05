@@ -180,9 +180,15 @@ label_settings = SubResource("LabelSettings_gh1tk")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 928.0
-offset_top = 296.0
-offset_right = 1039.0
-offset_bottom = 407.0
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(859, 289)
+texture_normal = ExtResource("2_ba7jq")
+
+[node name="Label" type="Label" parent="TouchScreenButton"]
+offset_left = 45.0
+offset_top = 50.0
+offset_right = 85.0
+offset_bottom = 73.0
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("9_jtmej")
