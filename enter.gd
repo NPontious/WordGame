@@ -6,4 +6,4 @@ func _ready():
 
 func letter_out():
 	await get_tree().create_timer(0.01).timeout
-	get_parent().get_parent().get_node("LogicScript").guess = ""
+	get_parent().get_node("LogicScript").guess = ""

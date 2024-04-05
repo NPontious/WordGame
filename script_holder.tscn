@@ -10,11 +10,11 @@
 [ext_resource type="Script" path="res://mix.gd" id="8_ohnvf"]
 [ext_resource type="Script" path="res://score.gd" id="9_jtmej"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_d60we"]
-font_size = 40
-
 [sub_resource type="LabelSettings" id="LabelSettings_hgjm4"]
 font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_d60we"]
+font_size = 40
 
 [sub_resource type="LabelSettings" id="LabelSettings_v6fc8"]
 line_spacing = 2.0
@@ -27,19 +27,6 @@ font_size = 40
 
 [node name="LogicScript" type="Node2D" parent="."]
 script = ExtResource("1_cm373")
-
-[node name="TouchScreenButtonEnter" type="TouchScreenButton" parent="LogicScript"]
-position = Vector2(702, 287)
-texture_normal = ExtResource("2_ba7jq")
-script = ExtResource("5_6ejrn")
-
-[node name="Label" type="Label" parent="LogicScript/TouchScreenButtonEnter"]
-offset_right = 128.0
-offset_bottom = 128.0
-text = "Check"
-label_settings = SubResource("LabelSettings_d60we")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Buttons" type="Node" parent="."]
 
@@ -153,6 +140,8 @@ texture_normal = ExtResource("2_ba7jq")
 [node name="Label" type="Label" parent="DisplayCurr_Word"]
 offset_right = 128.0
 offset_bottom = 128.0
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("6_pjbcd")
 
 [node name="DisplayUsed_Word" type="TouchScreenButton" parent="."]
@@ -181,14 +170,26 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(859, 289)
+position = Vector2(892, 289)
 texture_normal = ExtResource("2_ba7jq")
 
 [node name="Label" type="Label" parent="TouchScreenButton"]
-offset_left = 45.0
-offset_top = 50.0
-offset_right = 85.0
-offset_bottom = 73.0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 script = ExtResource("9_jtmej")
+
+[node name="TouchScreenButtonEnter" type="TouchScreenButton" parent="."]
+texture_normal = ExtResource("2_ba7jq")
+script = ExtResource("5_6ejrn")
+
+[node name="Label" type="Label" parent="TouchScreenButtonEnter"]
+offset_right = 128.0
+offset_bottom = 128.0
+text = "Check"
+label_settings = SubResource("LabelSettings_d60we")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -30,36 +30,24 @@ func _ready():
 
 	get_parent().get_node(".").get_child(0).position.y = screen_size.y * 0.4
 	get_parent().get_node(".").get_child(0).position.x = spacing2 * 2
-	print(get_parent().get_node(".").get_child(0))
-	print(get_parent().get_node(".").get_child(0).position.x)
-	get_child(0).position.y = screen_size.y * 0.0
+	
 	get_parent().get_node(".").get_child(2).position.y = screen_size.y * 0.4
 	get_parent().get_node(".").get_child(2).position.x = spacing2
-	print(get_parent().get_node(".").get_child(2))
-	print(get_parent().get_node(".").get_child(2).position.x)
+
 	get_parent().get_node(".").get_child(3).position.y = screen_size.y * 0.4
 	get_parent().get_node(".").get_child(3).position.x = spacing2 * 2
-	print(get_parent().get_node(".").get_child(3))
-	print(get_parent().get_node(".").get_child(3).position.x)
+
 	get_parent().get_node(".").get_child(4).position.y = screen_size.y * 0.4
 	get_parent().get_node(".").get_child(4).position.x = spacing2 * 3
-	print(get_parent().get_node(".").get_child(4))
-	print(get_parent().get_node(".").get_child(4).position.x)
+
 	get_parent().get_node(".").get_child(5).position.y = screen_size.y * 0.4
 	get_parent().get_node(".").get_child(5).position.x = spacing2 * 4
-	print(get_parent().get_node(".").get_child(5))
-	print(get_parent().get_node(".").get_child(5).position.x)
+
 	get_parent().get_node(".").get_child(6).position.y = screen_size.y * 0.4
 	get_parent().get_node(".").get_child(6).position.x = spacing2 * 5
-	print(get_parent().get_node(".").get_child(6))
-	print(get_parent().get_node(".").get_child(6).position.x)
 	
-	
-	#for child in get_parent().get_children():
-	#	print(child)
-		#if not child is Node:
-			#child.position.y = screen_size.y * 0.4
-	
+	get_parent().get_node(".").get_child(7).position.y = screen_size.y * 0.4
+	get_parent().get_node(".").get_child(7).position.x = spacing2 * 6
 	
 	var position_x = spacing
 	for child in buttons_node.get_children():
@@ -75,7 +63,7 @@ func _ready():
 		child.apply_scale(button_size)
 	
 	while run:
-		await $TouchScreenButtonEnter.released
+		await get_parent().get_node("TouchScreenButtonEnter").released
 		print(the_word)
 		print(shuffled)
 		var curr_word = guess
