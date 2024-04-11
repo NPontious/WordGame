@@ -19,48 +19,69 @@ func _ready():
 	# Get the screen size
 	var screen_size = DisplayServer.window_get_size()
 	var screen_width = screen_size.x
-	var button_size = Vector2(screen_size.x, screen_size.x) / 1440.0
+	var button_size = Vector2(screen_size.x, screen_size.x) / 1440.0 * 2
 	
 	# Calculate the spacing between buttons
 	var buttons_node = get_parent().get_node("Buttons")
 	var number_of_buttons = buttons_node.get_child_count()
-	var spacing = screen_width / (number_of_buttons + 2)
+	var spacing = screen_width / (number_of_buttons + 3)
 	var spacing2 = screen_width / (6 + 2)
 	var ypos = screen_size.y * 0.1
+	
+	var tall = 1
+	if(screen_size.y > screen_size.x):
+		tall = 2
+		spacing2 = screen_width / (7 + 2)
 
 	get_parent().get_node(".").get_child(0).position.y = screen_size.y * 0.4
-	get_parent().get_node(".").get_child(0).position.x = spacing2 * 2
+	get_parent().get_node(".").get_child(0).position.x = spacing2 * 2 - (spacing2/2)
+	get_parent().get_node(".").get_child(0).apply_scale(button_size)
 	
-	get_parent().get_node(".").get_child(2).position.y = screen_size.y * 0.4
-	get_parent().get_node(".").get_child(2).position.x = spacing2
+	get_parent().get_node(".").get_child(2).position.y = screen_size.y * 0.4 * 1.3
+	get_parent().get_node(".").get_child(2).position.x = spacing2  + (spacing2/2)
+	get_parent().get_node(".").get_child(2).apply_scale(button_size)
 
 	get_parent().get_node(".").get_child(3).position.y = screen_size.y * 0.4
-	get_parent().get_node(".").get_child(3).position.x = spacing2 * 2
+	get_parent().get_node(".").get_child(3).position.x = spacing2 * 2 - (spacing2/2)
+	get_parent().get_node(".").get_child(3).apply_scale(button_size)
 
-	get_parent().get_node(".").get_child(4).position.y = screen_size.y * 0.4
-	get_parent().get_node(".").get_child(4).position.x = spacing2 * 3
+	get_parent().get_node(".").get_child(4).position.y = screen_size.y * 0.4 * 1.3
+	get_parent().get_node(".").get_child(4).position.x = spacing2 * 3 + (spacing2/2)
+	get_parent().get_node(".").get_child(4).apply_scale(button_size)
 
 	get_parent().get_node(".").get_child(5).position.y = screen_size.y * 0.4
-	get_parent().get_node(".").get_child(5).position.x = spacing2 * 4
+	get_parent().get_node(".").get_child(5).position.x = spacing2 * 4 - (spacing2/2)
+	get_parent().get_node(".").get_child(5).apply_scale(button_size)
 
-	get_parent().get_node(".").get_child(6).position.y = screen_size.y * 0.4
-	get_parent().get_node(".").get_child(6).position.x = spacing2 * 5
+	get_parent().get_node(".").get_child(6).position.y = screen_size.y * 0.4 * 1.3
+	get_parent().get_node(".").get_child(6).position.x = spacing2 * 5 + (spacing2/2)
+	get_parent().get_node(".").get_child(6).apply_scale(button_size)
 	
 	get_parent().get_node(".").get_child(7).position.y = screen_size.y * 0.4
-	get_parent().get_node(".").get_child(7).position.x = spacing2 * 6
+	get_parent().get_node(".").get_child(7).position.x = spacing2 * 6 - (spacing2/2)
+	get_parent().get_node(".").get_child(7).apply_scale(button_size)
 	
 	var position_x = spacing
+	var i = 0
 	for child in buttons_node.get_children():
 		child.letter = shuffled[child.get_index()]
 		var label = child.get_node("Label")
 		label.text = shuffled[child.get_index()]
 		
 		# Set the button's position
-		child.position.x = position_x
-		position_x += spacing
-		child.position.y = ypos
+		if i < 4:
+			child.position.x = position_x
+			position_x += spacing * 2
+			child.position.y = ypos
+		if i == 4:
+			position_x = 2 * spacing
+		if i >= 4:
+			child.position.x = position_x
+			position_x += spacing * 2
+			child.position.y = ypos * 2
 
 		child.apply_scale(button_size)
+		i = i + 1
 	
 	while run:
 		await get_parent().get_node("TouchScreenButtonEnter").released
