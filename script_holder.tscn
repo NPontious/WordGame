@@ -32,7 +32,7 @@ script = ExtResource("1_cm373")
 [node name="Buttons" type="Node" parent="."]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Buttons"]
-position = Vector2(56, 64)
+position = Vector2(56, 128)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("2_h4iug")
 
@@ -46,7 +46,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="Buttons"]
-position = Vector2(136, 224)
+position = Vector2(136, 288)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("2_h4iug")
 
@@ -60,7 +60,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="Buttons"]
-position = Vector2(216, 64)
+position = Vector2(216, 128)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("2_h4iug")
 
@@ -74,7 +74,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="Buttons"]
-position = Vector2(376, 64)
+position = Vector2(376, 128)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("2_h4iug")
 
@@ -88,7 +88,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="Buttons"]
-position = Vector2(296, 224)
+position = Vector2(296, 288)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("2_h4iug")
 
@@ -102,7 +102,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="Buttons"]
-position = Vector2(536, 64)
+position = Vector2(536, 128)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("2_h4iug")
 
@@ -116,7 +116,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="Buttons"]
-position = Vector2(456, 224)
+position = Vector2(456, 288)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("2_h4iug")
 
@@ -130,7 +130,7 @@ uppercase = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButtonClear" type="TouchScreenButton" parent="."]
-position = Vector2(96, 672)
+position = Vector2(96, 736)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("4_m550c")
 
@@ -144,7 +144,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="DisplayCurr_Word" type="TouchScreenButton" parent="."]
-position = Vector2(288, 512)
+position = Vector2(288, 576)
 texture_normal = ExtResource("2_ba7jq")
 
 [node name="Label" type="Label" parent="DisplayCurr_Word"]
@@ -156,7 +156,7 @@ script = ExtResource("6_pjbcd")
 metadata/_edit_use_anchors_ = true
 
 [node name="DisplayUsed_Word" type="TouchScreenButton" parent="."]
-position = Vector2(480, 512)
+position = Vector2(480, 576)
 texture_normal = ExtResource("2_ba7jq")
 
 [node name="Label" type="Label" parent="DisplayUsed_Word"]
@@ -169,7 +169,7 @@ script = ExtResource("7_3qkrr")
 metadata/_edit_use_anchors_ = true
 
 [node name="MixButton" type="TouchScreenButton" parent="."]
-position = Vector2(96, 512)
+position = Vector2(96, 576)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("8_ohnvf")
 
@@ -183,7 +183,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(480, 672)
+position = Vector2(480, 736)
 texture_normal = ExtResource("2_ba7jq")
 
 [node name="Label" type="Label" parent="TouchScreenButton"]
@@ -197,7 +197,7 @@ script = ExtResource("9_jtmej")
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchScreenButtonEnter" type="TouchScreenButton" parent="."]
-position = Vector2(288, 672)
+position = Vector2(288, 736)
 texture_normal = ExtResource("2_ba7jq")
 script = ExtResource("5_6ejrn")
 
